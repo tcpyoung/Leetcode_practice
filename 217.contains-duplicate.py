@@ -9,7 +9,7 @@ class Solution(object):
     def containsDuplicate(self, nums):
         record= dict()
         for num in nums:
-            if num in record.keys(): 
+            if num in record: 
                 return True
             else:
                 record[num]=True
