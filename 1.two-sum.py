@@ -7,13 +7,10 @@
 # @lc code=start
 class Solution(object):
     def twoSum(self, nums, target):
-        records = dict()
-
-        for index, value in enumerate(nums):
-            if target-value in records:
-                return [records[target-value],index]
-            records[value]=index
-        return[]
+        for i in range(len(nums)):
+            for j in range(i):
+                if nums[i]+nums[j] == target:
+                    return i,j
         """
         :type nums: List[int]
         :type target: int

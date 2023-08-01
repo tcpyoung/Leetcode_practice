@@ -10,9 +10,11 @@ class Solution(object):
         left, right = 0, len(s)-1
 
         while left < right:
-            s[left], s[right]= s[right], s[left]
-            left += 1
-            right -= 1
+            temp=s[left]
+            s[left]=s[right]
+            s[right]=temp
+            left+=1
+            right-=1
         """
         :type s: List[str]
         :rtype: None Do not return anything, modify s in-place instead.

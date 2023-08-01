@@ -16,16 +16,6 @@ class Solution(object):
                 slow+=1
             fast+=1
         return slow
-        
-        fast=0
-        slow=0
-        size=len(nums)
-        while fast < size:
-            if nums[fast]!=val:
-                nums[slow]=nums[fast]
-                slow+=1
-            fast+=1
-        return slow
 
         # 1 2 3 4 5    2
         # slow = 4 fast = 5

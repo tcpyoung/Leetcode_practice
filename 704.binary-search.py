@@ -19,7 +19,7 @@ class Solution(object):
             else:
                 return middle
         
-        return -1
+        return -1              
         """
         :type nums: List[int]
         :type target: int
