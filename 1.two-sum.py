@@ -7,10 +7,14 @@
 # @lc code=start
 class Solution(object):
     def twoSum(self, nums, target):
+        sDict={}
         for i in range(len(nums)):
-            for j in range(i):
-                if nums[i]+nums[j] == target:
-                    return i,j
+            num1 = nums[i]
+            num2 = target - num1
+            if num2 in sDict:
+                return[sDict[num2],i]
+            else:
+                sDict[num1]=i
         """
         :type nums: List[int]
         :type target: int

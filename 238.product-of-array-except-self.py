@@ -8,7 +8,7 @@
 class Solution(object):
     def productExceptSelf(self, nums):
         
-        result = [1 for _ in range(len(nums))]
+        result = [1] * (len(nums))
         n=len(nums)
         prefix_product=1
         #result[0]=1 prefix =1 
