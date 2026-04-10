@@ -7,13 +7,11 @@
 # @lc code=start
 class Solution(object):
     def containsDuplicate(self, nums):
-        record= dict()
+        record = set()
         for num in nums:
-            if num in record: 
+            if num in record:
                 return True
-            else:
-                record[num]=True
-        
+            record.add(num)
         return False
            
         """
